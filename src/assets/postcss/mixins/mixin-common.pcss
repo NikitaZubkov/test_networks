@@ -1,0 +1,17 @@
+@define-mixin common-size-max {
+	width: 100%;
+	height: 100%;
+}
+
+@define-mixin common-init-size {
+	height: 100%;
+	margin: auto;
+	
+	@mixin --cm-from-desktop {
+	    width: $tablet;
+	}
+
+	@mixin --cm-to-desktop {
+	    width: $big-mobile;
+	}
+}

@@ -1,0 +1,36 @@
+.information {
+	width: 100%;
+	padding: 20px 0px 40px;
+
+	&__section {
+		@mixin common-init-size;
+		@mixin display-flex row, wrap, space-between, center;
+		position: relative;
+		padding: 130px 0px; 
+	}
+
+	&__block-text {
+		width: 50%;
+		max-width: 670px;
+	}
+
+	&__heading {
+		@mixin text-h1;
+	}
+
+	&__text {
+		font-size: 16px;
+		font-weight: 400;
+		color: $grey;
+	}
+
+	&__image {
+		position: absolute;
+	    top: 0;
+	    right: 0;
+		width: 439px;
+		height: 389px;
+		background-image: url("/public/i/image/information.png");
+		background-repeat: no-repeat;
+	}
+}

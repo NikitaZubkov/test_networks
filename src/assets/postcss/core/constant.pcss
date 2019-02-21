@@ -1,0 +1,38 @@
+	/* Цвета */
+$white: #ffffff;
+$black: #222428;
+
+$blue: #00a4ff;
+$grey: #5c6066;
+
+	/* Анимация */
+$transition-base: all 0.4s;
+$transition-4: all 0.4s;
+
+	/* Шрифты */
+$Museo-Sans-Cyrl: 'Museo-Sans-Cyrl', Arial, Tahoma, sans-serif;
+
+	/* Базовый шрифт, размер и цвет на странице */
+$font-family-base: $Museo-Sans-Cyrl;
+$font-size-base: 14px;
+$font-color-base: $black;
+$font-weight-base: 400;
+
+	/* z-index */
+$z-index-base: 1;
+$z-index-level-1: 5;
+$z-index-level-2: 10;
+$z-index-level-3: 15;
+$z-index-level-4: 20;
+
+	/* Базовые разрешения */
+$desktop: 1024px;
+$tablet: 960px;
+$big-mobile: 720px;
+$mobile: 480px;
+
+	/* Подготовленные разрешения для вставки в media */
+$self: 1px;
+$desktop-less: 		resolve($desktop - $self);
+$tablet-less: 		resolve($tablet - $self);
+$big-mobile-less:	resolve($big-mobile - $self);

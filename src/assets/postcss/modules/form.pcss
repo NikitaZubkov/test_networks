@@ -1,0 +1,46 @@
+@define-mixin form-button-active {
+	&--active {
+		width: 104px;
+		height: 100%;
+		min-height: 42px;
+		background: $blue;
+		color: $white;
+		transition: opacity 0.4s;
+	}
+
+	&:hover {
+		opacity: 0.8;
+	}
+}
+
+@define-mixin form-button-no-active {
+	&--no-active {
+		height: 100%;
+		min-height: 42px;
+		background: transparent;
+		color: $grey;
+		transition: opacity 0.4s;
+	}
+
+	&:hover {
+		opacity: 0.8;
+	}
+}
+
+@define-mixin form-button-transparent {
+	&--transparent {
+		width: 100%;
+		max-width: 290px;
+		min-height: 48px;
+		background: transparent;
+		color: $white;
+		border: 1px solid $white;
+		transition: opacity 0.4s;
+	}
+
+	&:hover {
+		opacity: 0.8;
+	}
+}
+
+.form {}

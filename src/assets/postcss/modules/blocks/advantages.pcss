@@ -1,0 +1,46 @@
+.advantages {
+	width: 100%;
+	padding: 60px 0px;
+
+	&__section {
+		@mixin common-init-size;
+		@mixin display-flex row, wrap, space-between;
+	}
+
+	&__block {
+		max-width: 300px
+	}
+
+	&__heading {
+		font-size: 26px;
+		line-height: 52px;
+		font-weight: 700;
+		color: #222428;
+	}
+
+	&__text {
+		max-width: 250px;
+		line-height: 20px;
+		font-size: 16px;
+		font-weight: 400;
+		color: $grey;
+	}
+
+	&__background {
+		width: 200px;
+		height: 168px;
+		background-repeat: no-repeat;
+
+		&--first {
+			background-image: url("/public/i/image/advantages-1.png")
+		}
+
+		&--second {
+			background-image: url("/public/i/image/advantages-2.png")
+		}
+
+		&--third {
+			background-image: url("/public/i/image/advantages-3.png")
+		}
+	}
+}

@@ -1,0 +1,92 @@
+/**
+ * Базовые media 
+ */
+
+    /**
+     * От десктопов и выше
+     */
+@define-mixin --cm-from-desktop {
+    @media screen and (min-width: $desktop) {
+        @mixin-content;
+    }
+}
+    /**
+     * От планшетов до десктопов
+     */
+@define-mixin --cm-tablet-to-desktop {
+    @media screen and (min-width: $tablet) and (max-width: $desktop-less) {
+        @mixin-content;
+    }
+}
+
+    /**
+     * От больших смартфонов до планшетов
+     */
+@define-mixin --cm-big-mobile-to-tablet {
+    @media screen and (min-width: $big-mobile) and (max-width: $tablet-less) {
+        @mixin-content;
+    }
+}
+
+    /**
+     * От смартфонов до больших смартфонов
+     */
+@define-mixin --cm-mobile-to-big-mobile {
+    @media screen and (min-width: $mobile) and (max-width: $big-mobile-less) {
+        @mixin-content;
+    }
+}
+
+    /**
+     * До смартфонов
+     */
+@define-mixin --cm-to-mobile {
+    @media screen and (max-width: $mobile) {
+        @mixin-content;
+    }
+}
+
+    /**
+     * От - До десктопов
+     */
+@define-mixin --cm-from-desktop {
+    @media screen and (min-width: $desktop) {
+        @mixin-content;
+    }
+}
+
+@define-mixin --cm-to-desktop {
+    @media screen and (max-width: $desktop-less) {
+        @mixin-content;
+    }
+}
+
+    /**
+     * От - До планшетов
+     */
+@define-mixin --cm-from-tablet {
+    @media screen and (min-width: $tablet) {
+        @mixin-content;
+    }
+}
+
+@define-mixin --cm-to-tablet {
+    @media screen and (max-width: $tablet-less) {
+        @mixin-content;
+    }
+}
+
+    /**
+     * От - До больших смартфонов
+     */
+@define-mixin --cm-from-big-mobile {
+    @media screen and (min-width: $big-mobile-less) {
+        @mixin-content;
+    }
+}
+
+@define-mixin --cm-to-big-mobile {
+    @media screen and (max-width: $big-mobile-less) {
+        @mixin-content;
+    }
+}

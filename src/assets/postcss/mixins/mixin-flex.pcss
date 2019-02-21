@@ -1,0 +1,14 @@
+/**
+ * Универсальный миксин для display: flex
+ */
+@define-mixin display-flex $direction, $wrap, $justify, $align {
+	display: flex;
+
+	flex-direction: $direction;
+
+	flex-wrap: $wrap;
+
+	justify-content: $justify;
+
+	align-items: $align;
+}

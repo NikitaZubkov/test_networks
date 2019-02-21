@@ -1,0 +1,35 @@
+	/* Элементы колонки: 
+		- сама колонка
+		- пространство между колонками
+	*/
+
+	/* Колонка для $tablet и выше */
+$xs-col: 83.2px;
+$xs-col-between: 22.5px;
+	
+	/* 
+		Миксин для генерации ширины элемента согласно выбранной сетки 
+		Передаваемые параметры:
+			- $type-grid: Тип сетки
+				- xs: планшет и выше
+			- $column-count: количество колонок
+			- $between-column: указыватся, если нужно к общей ширине добавить ещё пространство между колонками
+
+		Все поля обязательные, если последнего поля нет - указываем 0
+	*/
+@define-mixin grid-witdh $type-grid, $column-count, $between-column {
+	$col: 0px;
+	$between: 0px;
+
+	@if $type-grid == xs {
+	    $col: $xs-col;
+	    $between: $xs-col-between;
+	}
+		
+		/* Складываем количество колонок + пространство между ними + дополнительное пространство */
+	$witdh-col: resolve($col * $column-count);
+	$witdh-between: resolve($between * ($column-count - 1));
+	$witdh-between-add: resolve($between * $between-column);
+
+	width: resolve($witdh-col + $witdh-between + $witdh-between-add);
+}

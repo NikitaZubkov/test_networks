@@ -1,0 +1,40 @@
+.header {
+	width: 100%;
+	padding: 40px 0px;
+
+	&__section {
+		@mixin common-init-size;
+		@mixin display-flex row, nowrap, space-between;
+	}
+
+	&__block {
+		&-logotype {
+			width: 191px;
+			height: 51px;
+		}
+
+		&-information {
+			display: flex;
+		}
+	}
+
+	&__logotype {
+		@mixin common-size-max;
+		float: left;
+		background-image: url("/public/i/icon/logotype.png");
+		background-repeat: no-repeat;
+	}
+
+	&__button {
+		@mixin form-button-active;
+		@mixin form-button-no-active;
+
+		&--active {
+			font-weight: 700;
+		}
+
+		&--no-active {
+			margin-right: 20px;
+		}
+	}
+}
